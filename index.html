@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>مانهوا شادو</title>
+  <meta charset="UTF-8">
+  <title>موقع مانها - Promanga Clone</title>
   <style>
-    body { background: #111; color: white; font-family: 'Tahoma', sans-serif; text-align: center; padding: 40px; }
-    h1 { color: #f0f0f0; }
-    .chapter-list { margin-top: 20px; }
-    .chapter-list a {
-      display: inline-block;
-      background: #222;
-      color: white;
-      padding: 10px 20px;
-      margin: 10px;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    .chapter-list a:hover { background: #555; }
+    body { background: #111; color: white; font-family: sans-serif; margin: 0; padding: 0; }
+    header { background: #222; padding: 20px; text-align: center; font-size: 28px; font-weight: bold; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+    .card { background: #1e1e1e; border-radius: 10px; overflow: hidden; text-align: center; }
+    .card img { width: 100%; height: 280px; object-fit: cover; }
+    .card h3 { margin: 10px; }
+    .card p { font-size: 14px; padding: 0 10px 10px; }
+    .card a { display: inline-block; margin-bottom: 10px; color: #ff5050; text-decoration: none; font-weight: bold; }
   </style>
 </head>
 <body>
-  <h1>📚 مانهوا شادو</h1>
-  <div class="chapter-list">
-    <a href="chapter-1.html">الفصل 1</a>
-    <a href="chapter-2.html">الفصل 2</a>
-    <a href="chapter-3.html">الفصل 3</a>
+  <header>📚 موقع مانها - Promanga Clone</header>
+  <div class="grid">
+
+    <div class="card">
+      <img src="cover1.jpg" alt="غلاف سيد الظلال">
+      <h3>سيد الظلال</h3>
+      <p>قصة انتقام شادو بعد الخيانة.</p>
+      <a href="shadow-lord.html">عرض الفصول</a>
+    </div>
+    
+    <div class="card">
+      <img src="cover2.jpg" alt="غلاف نصل التنين">
+      <h3>نصل التنين</h3>
+      <p>مغامرات بطل يسعى للعدالة.</p>
+      <a href="dragon-blade.html">عرض الفصول</a>
+    </div>
+    
+    <div class="card">
+      <img src="cover3.jpg" alt="غلاف الساحر المظلم">
+      <h3>الساحر المظلم</h3>
+      <p>ساحر يبحث عن القوة المطلقة.</p>
+      <a href="dark-mage.html">عرض الفصول</a>
+    </div>
+    
   </div>
 </body>
 </html>
