@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>قراءة الفصل 1</title>
+  <style>
+    body { background: #111; color: white; font-family: 'Tahoma', sans-serif; margin: 0; padding: 0; text-align: center; }
+    header { background: #222; padding: 15px; font-size: 20px; font-weight: bold; }
+    img { max-width: 100%; height: auto; margin: 10px 0; border-radius: 8px; }
+    .nav-buttons { margin: 20px 0; }
+    .nav-buttons a { background: #444; color: white; padding: 10px 20px; text-decoration: none; margin: 0 10px; border-radius: 5px; transition: .3s; }
+    .nav-buttons a:hover { background: #666; }
+  </style>
+</head>
+<body>
+  <header>الفصل <span id="chapterNumber">1</span></header>
+  <div id="imagesContainer"></div>
+  <div class="nav-buttons">
+    <a id="prevBtn" href="#">الفصل السابق</a>
+    <a href="index.html">الرئيسية</a>
+    <a id="nextBtn" href="#">الفصل التالي</a>
+  </div>
+  <script>
+    const chapter = 1;
+    const totalImages = 5;
+    const folder = `chapters/chapter-${chapter}/`;
+    document.getElementById('chapterNumber').textContent = chapter;
+    const container = document.getElementById('imagesContainer');
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement('img');
+      img.src = `${folder}${i}.jpg`;
+      container.appendChild(img);
+    }
+    document.getElementById('prevBtn').href = `chapter-${chapter-1}.html`;
+    document.getElementById('nextBtn').href = `chapter-${chapter+1}.html`;
+  </script>
+</body>
+</html>
